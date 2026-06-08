@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор Времени</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="calculator">
+        <div class="display">
+            <div id="history" class="history"></div>
+            <div id="current-input" class="current-input">0с</div>
+        </div>
+        <div class="controls">
+            <div class="row">
+                <button onclick="clearAll()" class="btn-gray">←</button>
+                <button onclick="appendUnit('ч')" class="btn-gray">ч</button>
+                <button onclick="appendUnit('м')" class="btn-gray">м</button>
+                <button onclick="appendUnit('с')" class="btn-gray">с</button>
+            </div>
+            <div class="row">
+                <button onclick="appendNumber(7)">7</button>
+                <button onclick="appendNumber(8)">8</button>
+                <button onclick="appendNumber(9)">9</button>
+                <button onclick="setOperator('/')" class="btn-orange">÷</button>
+            </div>
+            <div class="row">
+                <button onclick="appendNumber(4)">4</button>
+                <button onclick="appendNumber(5)">5</button>
+                <button onclick="appendNumber(6)">6</button>
+                <button onclick="setOperator('*')" class="btn-orange">×</button>
+            </div>
+            <div class="row">
+                <button onclick="appendNumber(1)">1</button>
+                <button onclick="appendNumber(2)">2</button>
+                <button onclick="appendNumber(3)">3</button>
+                <button onclick="setOperator('-')" class="btn-orange">−</button>
+            </div>
+            <div class="row">
+                <button onclick="appendNumber(0)" class="btn-zero">0</button>
+                <button onclick="setOperator('+')" class="btn-orange">+</button>
+                <button onclick="calculate()" class="btn-orange">=</button>
+            </div>
+        </div>
+    </div>
+    <script src="/static/script.js"></script>
+</body>
+</html>
